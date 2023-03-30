@@ -1,12 +1,11 @@
 import openai
 
 # Set up the OpenAI API client
-openai.api_key = "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"
-
+# openai.api_key = "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"
+openai.api_key = input("Enter OpenAI API Key")
 def generate_response(prompt):
     response = openai.Completion.create(
         engine="text-davinci-002",
-        training_file="path/to/my_dataset.jsonl",
         prompt=prompt,
         max_tokens=100,
         n=1,
