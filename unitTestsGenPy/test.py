@@ -2,7 +2,7 @@ import openai
 import os
 
 def generate_unit_tests(csharp_code, api_key):
-    # Set up the OpenAI API client
+    # Set up the OpenAI API client, use input 
     openai.api_key = api_key
 
     prompt = f"Generate C# unit tests for the following C# code:\n{csharp_code}\n\nUnit tests:\n"
