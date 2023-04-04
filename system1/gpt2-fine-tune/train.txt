@@ -1,0 +1,51 @@
+Generate unit tests for the following C# code:
+public class Calculator
+{
+    public int Add(int a, int b)
+    {
+        return a + b;
+    }
+}
+===
+[Test]
+public void Add_TwoNumbers_ReturnsSum()
+{
+    // Arrange
+    Calculator calculator = new Calculator();
+    int a = 5;
+    int b = 3;
+    int expectedSum = 8;
+
+    // Act
+    int result = calculator.Add(a, b);
+
+    // Assert
+    Assert.AreEqual(expectedSum, result);
+}
+===
+
+Generate unit tests for the following C# code:
+public class Calculator
+{
+    public int Subtract(int a, int b)
+    {
+        return a - b;
+    }
+}
+===
+[Test]
+public void Subtract_TwoNumbers_ReturnsDifference()
+{
+    // Arrange
+    Calculator calculator = new Calculator();
+    int a = 8;
+    int b = 3;
+    int expectedDifference = 5;
+
+    // Act
+    int result = calculator.Subtract(a, b);
+
+    // Assert
+    Assert.AreEqual(expectedDifference, result);
+}
+===
